@@ -31,7 +31,6 @@ func main() {
 	}
 	fmt.Println("Results Part 1 : ", part1(lines))
 	fmt.Println("Results Part 2 :", part2(lines))
-
 }
 
 func part1(lines []string) int {
@@ -72,7 +71,7 @@ func replaceWordsWithNumbers(input string) string {
 		`one`:   "o1e",
 		`zero`:  "z0o",
 	}
-	//var output string
+
 	for word, number := range replacements {
 		re := regexp.MustCompile(word)
 		input = re.ReplaceAllString(input, number)
